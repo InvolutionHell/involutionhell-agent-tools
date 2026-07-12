@@ -1,0 +1,33 @@
+{
+  "name": "involutionhell-cli",
+  "version": "0.1.0",
+  "description": "Agent Skill and CLI for searching and publishing InvolutionHell articles",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "involutionhell": "./bin/involutionhell.mjs",
+    "ih": "./bin/involutionhell.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "smoke": "node bin/involutionhell.mjs search \"数组\" --limit 3 --no-cache"
+  },
+  "dependencies": {
+    "@orama/orama": "^3.1.18",
+    "@orama/tokenizers": "^3.1.18",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
